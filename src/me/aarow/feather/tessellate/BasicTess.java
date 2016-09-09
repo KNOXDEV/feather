@@ -163,16 +163,4 @@ public class BasicTess implements Tessellator, BufferUtils {
 		this.texture = false;
 		return this;
 	}
-
-	/**
-	 * Performs all three rendering stages in one method.
-	 * This method cannot be run more than once without entering new data.
-	 *
-	 * @param mode The OpenGL mode to render the data with
-	 * @return The original Tessellator Object
-	 */
-	@Override public Tessellator draw(int mode)
-	{
-		return this.bind().pass(mode).reset();
-	}
 }
