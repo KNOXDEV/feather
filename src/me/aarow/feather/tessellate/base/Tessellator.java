@@ -68,6 +68,17 @@ public interface Tessellator {
     Tessellator reset();
 
     /**
+     * Resets the buffer without clearing the data.
+     * This will allow you to stop using the Tessellator for a bit
+     * while still preserving its current contents. This means you
+     * can unbind this Tessellator, continue to add vertices, and
+     * reuse it later with the old data + the new information.
+     *
+     * @return The original Tessellator Object
+     */
+    Tessellator unbind();
+
+    /**
      * Performs all three rendering stages in one method.
      * This method cannot be run more than once without entering new data.
      *
