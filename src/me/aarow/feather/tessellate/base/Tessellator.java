@@ -1,5 +1,7 @@
 package me.aarow.feather.tessellate.base;
 
+import me.aarow.feather.util.Color;
+
 /**
  * A standard abstract interface for an OpenGL Tessellator.
  * This abstraction supports purely vertices, texture, and color.
@@ -15,6 +17,36 @@ public interface Tessellator {
      * @return The original Tessellator Object
      */
     Tessellator color(int color);
+
+    /**
+     * @param color The color to associate the upcoming vertex data with
+     * @return The original Tessellator Object
+     */
+    default Tessellator color(Color color) {
+        return color(color.toHex());
+    }
+
+    /**
+     * @param red   The red component of the color to bind
+     * @param green The green component of the color to bind
+     * @param blue  The blue component of the color to bind
+     * @param alpha The alpha component of the color to bind
+     * @return The original Tessellator Object
+     */
+    default Tessellator color(int red, int green, int blue, int alpha) {
+        return color(Color.convert().rgba(red, green, blue, alpha));
+    }
+
+    /**
+     * @param red   The red component of the color to bind
+     * @param green The green component of the color to bind
+     * @param blue  The blue component of the color to bind
+     * @param alpha The alpha component of the color to bind
+     * @return The original Tessellator Object
+     */
+    default Tessellator color(float red, float green, float blue, float alpha) {
+        return color(Color.convert().rgba(red, green, blue, alpha));
+    }
 
     /**
      * Set the texture coordinates to associate the upcoming vertex data with.
@@ -39,6 +71,7 @@ public interface Tessellator {
 
     /**
      * The first stage of rendering.
+     *
      * Binds (finalizes) the current rendering data stored in the buffer for drawing.
      * This must be executed before you perform a rendering pass.
      *
@@ -48,6 +81,7 @@ public interface Tessellator {
 
     /**
      * The second stage of rendering.
+     *
      * Performs a rendering pass with the data bound to the buffer.
      * If the data is not bound first, this method will fail.
      * Otherwise, you can render the data for as many passes as you please.
@@ -59,6 +93,7 @@ public interface Tessellator {
 
     /**
      * The third and final stage of rendering.
+     *
      * Clears up the buffer and resets the Tessellator so it can
      * be used again with new data. Passes can no longer be made
      * after this method is executed.
