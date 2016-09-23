@@ -1,9 +1,9 @@
-package me.aarow.feather.texture;
+package pw.knx.feather.texture;
 
-import me.aarow.feather.texture.base.Texture;
+import pw.knx.feather.texture.base.Texture;
 import org.lwjgl.opengl.GL11;
 
-import me.aarow.feather.tessellate.base.Tessellator;
+import pw.knx.feather.tessellate.base.Tessellator;
 
 /**
  * A simple implementation of our OpenGL Texture interface

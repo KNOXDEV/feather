@@ -1,4 +1,4 @@
-package me.aarow.feather.util;
+package pw.knx.feather.util;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL15;

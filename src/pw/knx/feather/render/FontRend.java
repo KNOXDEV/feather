@@ -1,4 +1,4 @@
-package me.aarow.feather.render;
+package pw.knx.feather.render;
 
 import java.awt.AlphaComposite;
 import java.awt.Color;
@@ -21,8 +21,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.WeakHashMap;
 
-import me.aarow.feather.tessellate.GrowingTess;
-import me.aarow.feather.texture.base.Texture;
+import pw.knx.feather.tessellate.GrowingTess;
+import pw.knx.feather.texture.base.Texture;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;

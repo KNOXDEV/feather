@@ -1,6 +1,6 @@
-package me.aarow.feather.tessellate.base;
+package pw.knx.feather.tessellate.base;
 
-import me.aarow.feather.util.Color;
+import pw.knx.feather.util.Color;
 
 /**
  * A standard abstract interface for an OpenGL Tessellator.

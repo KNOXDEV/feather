@@ -1,4 +1,4 @@
-package me.aarow.feather.util;
+package pw.knx.feather.util;
 
 /**
  * A simple objectual representation of a Color.

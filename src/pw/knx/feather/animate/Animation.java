@@ -1,4 +1,4 @@
-package me.aarow.feather.animate;
+package pw.knx.feather.animate;
 
 /**
  * A tick-based animation utility. This class essentially acts as a wrapper

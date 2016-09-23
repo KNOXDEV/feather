@@ -1,7 +1,7 @@
-package me.aarow.feather.texture.base;
+package pw.knx.feather.texture.base;
 
-import me.aarow.feather.tessellate.base.Tessellator;
-import me.aarow.feather.util.TextureUtils;
+import pw.knx.feather.tessellate.base.Tessellator;
+import pw.knx.feather.util.TextureUtils;
 
 /**
  * A simple OpenGL Texture interface

@@ -1,7 +1,7 @@
-package me.aarow.feather.util;
+package pw.knx.feather.util;
 
-import me.aarow.feather.texture.BasicTexture;
-import me.aarow.feather.texture.base.Texture;
+import pw.knx.feather.texture.BasicTexture;
+import pw.knx.feather.texture.base.Texture;
 
 /**
  * A utility class currently only used to generate Basic textures.
