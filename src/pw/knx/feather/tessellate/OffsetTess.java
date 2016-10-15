@@ -134,6 +134,12 @@ public class OffsetTess implements Tessellator {
 		return this;
 	}
 
+	@Override
+	public Tessellator unbind() {
+		tess.unbind();
+		return this;
+	}
+
 	/**
 	 * Performs all three rendering stages in one method.
 	 * This method cannot be run more than once without entering new data.

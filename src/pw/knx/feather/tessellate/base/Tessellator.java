@@ -14,6 +14,7 @@ public interface Tessellator {
 
     /**
      * @param color The color to associate the upcoming vertex data with
+     *              NOTE: Must be in ABGR format
      * @return The original Tessellator Object
      */
     Tessellator color(int color);
@@ -23,7 +24,7 @@ public interface Tessellator {
      * @return The original Tessellator Object
      */
     default Tessellator color(Color color) {
-        return color(color.toHex());
+        return color(color.getHex(Color.HexFormat.ABGR));
     }
 
     /**
@@ -34,7 +35,7 @@ public interface Tessellator {
      * @return The original Tessellator Object
      */
     default Tessellator color(int red, int green, int blue, int alpha) {
-        return color(Color.convert().rgba(red, green, blue, alpha));
+        return color(Color.HexFormat.ABGR.getHex(red, green, blue, alpha));
     }
 
     /**
@@ -45,7 +46,7 @@ public interface Tessellator {
      * @return The original Tessellator Object
      */
     default Tessellator color(float red, float green, float blue, float alpha) {
-        return color(Color.convert().rgba(red, green, blue, alpha));
+        return color((int)(red*255), (int)(green*255), (int)(blue*255), (int)(alpha*255));
     }
 
     /**
