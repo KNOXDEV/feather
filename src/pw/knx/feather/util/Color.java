@@ -321,10 +321,10 @@ public class Color implements BufferUtils {
 	}
 
 
-    /*
+	/*
 	 * Group Setters - Methods for setting color formats in bulk.
-     * Mostly just calls the Individual Setters below
-     */
+	 * Mostly just calls the Individual Setters below
+	 */
 
 
 	/**
@@ -400,9 +400,9 @@ public class Color implements BufferUtils {
 	}
 
 
-    /*
-     * Individual Setters - sets each individual color format value
-     */
+	/*
+	 * Individual Setters - sets each individual color format value
+ 	 */
 
 
 	/**
@@ -535,11 +535,11 @@ public class Color implements BufferUtils {
 	}
 
 
-    /*
-     * Cache Invalidators - These methods keep track of the constant,
-     * "one-step-behind" color formats and ensure that at least one
-     * color format is up-to-date at any given time.
-     */
+	/*
+	 * Cache Invalidators - These methods keep track of the constant,
+	 * "one-step-behind" color formats and ensure that at least one
+	 * color format is up-to-date at any given time.
+	 */
 
 
 	private Color onSetHSB() {
@@ -564,11 +564,11 @@ public class Color implements BufferUtils {
 	}
 
 
-    /*
-     * Individual Getters - returns actual values of this Color in a
-     * variety of formats. Each call checks to make sure the requested
-     * Color format is available, and if not, converts it
-     */
+	/*
+	 * Individual Getters - returns actual values of this Color in a
+	 * variety of formats. Each call checks to make sure the requested
+	 * Color format is available, and if not, converts it
+	 */
 
 
 	/**
@@ -673,11 +673,11 @@ public class Color implements BufferUtils {
 	}
 
 
-    /*
-     * Cache Updaters - These functions handle the actual conversions between values.
-     * These methods are not called when the color is set, but rather when a given
-     * color format is requested (ie, lazy values to decrease overhead)
-     */
+	/*
+	 * Cache Updaters - These functions handle the actual conversions between values.
+	 * These methods are not called when the color is set, but rather when a given
+	 * color format is requested (ie, lazy values to decrease overhead)
+	 */
 
 	private Color updateHSB() {
 		if (this.updateHSB) {
@@ -757,10 +757,10 @@ public class Color implements BufferUtils {
 	}
 
 
-    /*
-     * Builder functions - These ensure that the given color is initialized
-     * with SOMETHING before you start calling getters
-     */
+	/*
+	 * Builder functions - These ensure that the given color is initialized
+	 * with SOMETHING before you start calling getters
+	 */
 
 
 	/**
