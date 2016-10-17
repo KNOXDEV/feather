@@ -6,36 +6,51 @@ import pw.knx.feather.util.TextureUtils;
 /**
  * A simple OpenGL Texture interface
  * The voids in this interface return the Texture object for easy method chaining
+ *
  * @author KNOXDEV
  * @since 8/8/2016 23:53
  */
 public interface Texture extends TextureUtils {
 
-	/** @return the OpenGL Texture ID */
+	/**
+	 * @return the OpenGL Texture ID
+	 */
 	int getID();
 
-	/** @return the x coordinate of the top-left texture point, on a float scale from 0 to 1.0 */
+	/**
+	 * @return the x coordinate of the top-left texture point, on a float scale from 0 to 1.0
+	 */
 	float getU();
 
-	/** @return the y coordinate of the top-left texture point, on a float scale from 0 to 1.0 */
+	/**
+	 * @return the y coordinate of the top-left texture point, on a float scale from 0 to 1.0
+	 */
 	float getV();
 
-	/** @return the x coordinate of the bottom-right texture point, on a float scale from 0 to 1.0 */
+	/**
+	 * @return the x coordinate of the bottom-right texture point, on a float scale from 0 to 1.0
+	 */
 	float getU1();
 
-	/** @return the y coordinate of the bottom-right texture point, on a float scale from 0 to 1.0 */
+	/**
+	 * @return the y coordinate of the bottom-right texture point, on a float scale from 0 to 1.0
+	 */
 	float getV1();
 
-	/** @return the width of the texture rendering in pixels */
+	/**
+	 * @return the width of the texture rendering in pixels
+	 */
 	float getWidth();
 
-	/** @return the height of the texture rendering in pixels */
+	/**
+	 * @return the height of the texture rendering in pixels
+	 */
 	float getHeight();
 
 	/**
 	 * @param id The OpenGL Texture object ID
 	 * @return The original Texture object
-     */
+	 */
 	Texture setID(int id);
 
 	/**
@@ -76,6 +91,7 @@ public interface Texture extends TextureUtils {
 
 	/**
 	 * Binds the texture to be rendered
+	 *
 	 * @return The original Texture object
 	 */
 	Texture bind();
@@ -83,9 +99,9 @@ public interface Texture extends TextureUtils {
 	/**
 	 * @param tess The Tessellator Object you wish to use to render this texture
 	 * @param mode The OpenGL mode ID you wish to use to render this texture
-	 * @param x The x coordinate in pixels you wish to render the texture on the screen
-	 * @param y The y coordinate in pixels you wish to render the texture on the screen
-     * @return The original Texture object
-     */
-    Texture draw(Tessellator tess, int mode, float x, float y);
+	 * @param x    The x coordinate in pixels you wish to render the texture on the screen
+	 * @param y    The y coordinate in pixels you wish to render the texture on the screen
+	 * @return The original Texture object
+	 */
+	Texture draw(Tessellator tess, int mode, float x, float y);
 }
