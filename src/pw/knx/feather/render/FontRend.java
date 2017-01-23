@@ -18,8 +18,28 @@ import java.util.*;
 import java.util.List;
 
 /**
- * @author KNOXDEV
- * @since 10/18/2016 02:52
+ * FontRend is a simple, one-class library for the rendering of all Unicode Strings using OpenType fonts.
+ * It is adapted from thvortex's BetterFonts, found here: https://github.com/user/thvortex/BetterFonts
+ * <p>
+ * There are is one key way in which this implementation differs from thvortex's:
+ * 1 - This version has been generalized for LWJGL rather than purely Minecraft.
+ * As such, all color-code related information or digit optimizations are gone.
+ * <p>
+ * Regardless of these changes, as much of the model remains the same, plenty of documentation will
+ * be copied directly from thvortex's original repository.
+ * <p>
+ * This aforementioned processing model is as follows: FontRend caches the glyph layout of individual strings,
+ * and it also caches the pre-rendered images for individual glyphs. Once a string and its glyph images are cached,
+ * the critical path in renderString() will draw the glyphs as fast as if using a bitmap font. Strings are cached
+ * using weak references through a two layer string cache. Strings that are no longer in use by LWJGL will be
+ * silently evicted from the cache, while the pre-rendered images of individual glyphs remains cached forever.
+ * <p>
+ * This class is also responsible for selecting the proper fonts to render each glyph, since Java's own "SansSerif"
+ * logical font does not always select the proper physical font to use (especially on less common Linux distributions).
+ * Once a pre-rendered glyph image is cached, it will remain stored in an OpenGL texture for the entire lifetime of the application.
+ *
+ * @author KNOXDEV, thvortex
+ * @since 1/23/2017 14:40
  */
 public class FontRend {
 
