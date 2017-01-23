@@ -59,7 +59,6 @@ public class Color implements BufferUtils {
 	 */
 	private boolean updateHSB, updateRGB, updateRGBInts;
 
-
 	/**
 	 * Restricting usage to this class requires the user to
 	 * utilize our builder functions at the bottom of this class
@@ -72,13 +71,13 @@ public class Color implements BufferUtils {
 	 * Scaling Methods - Allows you to scale a color value
 	 */
 
-
 	/**
 	 * Multiply this color's HSB by given amounts
 	 *
 	 * @param scaleH the amount to multiply hue by
 	 * @param scaleS the amount to multiply saturation by
 	 * @param scaleB the amount to multiply brightness by
+	 *
 	 * @return This color object, freshly scaled
 	 */
 	public Color scaleHSB(float scaleH, float scaleS, float scaleB) {
@@ -91,6 +90,7 @@ public class Color implements BufferUtils {
 	 * @param scaleR the amount to multiply red by
 	 * @param scaleG the amount to multiply green by
 	 * @param scaleB the amount to multiply blue by
+	 *
 	 * @return This color object, freshly scaled
 	 */
 	public Color scaleRGB(float scaleR, float scaleG, float scaleB) {
@@ -101,6 +101,7 @@ public class Color implements BufferUtils {
 	 * Multiply this color's hue by the given amount
 	 *
 	 * @param scale the amount to multiply this color
+	 *
 	 * @return This color object, freshly scaled
 	 */
 	public Color scaleHue(float scale) {
@@ -111,6 +112,7 @@ public class Color implements BufferUtils {
 	 * Multiply this color's saturation by the given amount
 	 *
 	 * @param scale the amount to multiply this color
+	 *
 	 * @return This color object, freshly scaled
 	 */
 	public Color scaleSaturation(float scale) {
@@ -121,6 +123,7 @@ public class Color implements BufferUtils {
 	 * Multiply this color's brightness by the given amount
 	 *
 	 * @param scale the amount to multiply this color
+	 *
 	 * @return This color object, freshly scaled
 	 */
 	public Color scaleBrightness(float scale) {
@@ -131,6 +134,7 @@ public class Color implements BufferUtils {
 	 * Multiply this color's red by the given amount
 	 *
 	 * @param scale the amount to multiply this color
+	 *
 	 * @return This color object, freshly scaled
 	 */
 	public Color scaleRed(float scale) {
@@ -141,6 +145,7 @@ public class Color implements BufferUtils {
 	 * Multiply this color's green by the given amount
 	 *
 	 * @param scale the amount to multiply this color
+	 *
 	 * @return This color object, freshly scaled
 	 */
 	public Color scaleGreen(float scale) {
@@ -151,6 +156,7 @@ public class Color implements BufferUtils {
 	 * Multiply this color's blue by the given amount
 	 *
 	 * @param scale the amount to multiply this color
+	 *
 	 * @return This color object, freshly scaled
 	 */
 	public Color scaleBlue(float scale) {
@@ -161,6 +167,7 @@ public class Color implements BufferUtils {
 	 * Multiply this color's alpha by the given amount
 	 *
 	 * @param scale the amount to multiply this color
+	 *
 	 * @return This color object, freshly scaled
 	 */
 	public Color scaleAlpha(float scale) {
@@ -173,14 +180,12 @@ public class Color implements BufferUtils {
 	 * by the passed offset(s)
 	 */
 
-
 	/**
 	 * Translates this color's HSB by the passed offsets
 	 *
 	 * @param offsetH the amount to add to this color's Hue
 	 * @param offsetS the amount to add to this color's Saturation
 	 * @param offsetB the amount to add to this color's Brightness
-	 * @return
 	 */
 	public Color translateHSB(float offsetH, float offsetS, float offsetB) {
 		return translateHue(offsetH).translateSaturation(offsetS).translateBrightness(offsetB);
@@ -192,7 +197,6 @@ public class Color implements BufferUtils {
 	 * @param offsetR the amount to add to this color's Red
 	 * @param offsetG the amount to add to this color's Green
 	 * @param offsetB the amount to add to this color's Blue
-	 * @return
 	 */
 	public Color translateRGB(float offsetR, float offsetG, float offsetB) {
 		return translateRed(offsetR).translateGreen(offsetG).translateBlue(offsetB);
@@ -204,7 +208,6 @@ public class Color implements BufferUtils {
 	 * @param offsetR the integer to add to this color's Red
 	 * @param offsetG the integer to add to this color's Green
 	 * @param offsetB the integer to add to this color's Blue
-	 * @return
 	 */
 	public Color translateRGB(int offsetR, int offsetG, int offsetB) {
 		return translateRed(offsetR).translateGreen(offsetG).translateBlue(offsetB);
@@ -214,6 +217,7 @@ public class Color implements BufferUtils {
 	 * Translates this color's hue by the passed offset
 	 *
 	 * @param offset the amount to add to this color
+	 *
 	 * @return This color object, freshly translated
 	 */
 	public Color translateHue(float offset) {
@@ -224,6 +228,7 @@ public class Color implements BufferUtils {
 	 * Translates this color's saturation by the passed offset
 	 *
 	 * @param offset the amount to add to this color
+	 *
 	 * @return This color object, freshly translated
 	 */
 	public Color translateSaturation(float offset) {
@@ -234,6 +239,7 @@ public class Color implements BufferUtils {
 	 * Translates this color's brightness by the passed offset
 	 *
 	 * @param offset the amount to add to this color
+	 *
 	 * @return This color object, freshly translated
 	 */
 	public Color translateBrightness(float offset) {
@@ -244,6 +250,7 @@ public class Color implements BufferUtils {
 	 * Translates this color's red by the passed offset
 	 *
 	 * @param offset the amount to add to this color
+	 *
 	 * @return This color object, freshly translated
 	 */
 	public Color translateRed(float offset) {
@@ -254,6 +261,7 @@ public class Color implements BufferUtils {
 	 * Translates this color's green by the passed offset
 	 *
 	 * @param offset the amount to add to this color
+	 *
 	 * @return This color object, freshly translated
 	 */
 	public Color translateGreen(float offset) {
@@ -264,6 +272,7 @@ public class Color implements BufferUtils {
 	 * Translates this color's blue by the passed offset
 	 *
 	 * @param offset the amount to add to this color
+	 *
 	 * @return This color object, freshly translated
 	 */
 	public Color translateBlue(float offset) {
@@ -274,6 +283,7 @@ public class Color implements BufferUtils {
 	 * Translates this color's red integer by the passed offset
 	 *
 	 * @param offset the amount to add to this color
+	 *
 	 * @return This color object, freshly translated
 	 */
 	public Color translateRed(int offset) {
@@ -284,6 +294,7 @@ public class Color implements BufferUtils {
 	 * Translates this color's green integer by the passed offset
 	 *
 	 * @param offset the amount to add to this color
+	 *
 	 * @return This color object, freshly translated
 	 */
 	public Color translateGreen(int offset) {
@@ -294,6 +305,7 @@ public class Color implements BufferUtils {
 	 * Translates this color's blue integer by the passed offset
 	 *
 	 * @param offset the amount to add to this color
+	 *
 	 * @return This color object, freshly translated
 	 */
 	public Color translateBlue(int offset) {
@@ -304,6 +316,7 @@ public class Color implements BufferUtils {
 	 * Translates this color's alpha by the passed offset
 	 *
 	 * @param offset the amount to add to this color
+	 *
 	 * @return This color object, freshly translated
 	 */
 	public Color translateAlpha(float offset) {
@@ -314,6 +327,7 @@ public class Color implements BufferUtils {
 	 * Translates this color's alpha integer by the passed offset
 	 *
 	 * @param offset the amount to add to this color
+	 *
 	 * @return This color object, freshly translated
 	 */
 	public Color translateAlpha(int offset) {
@@ -326,7 +340,6 @@ public class Color implements BufferUtils {
      * Mostly just calls the Individual Setters below
      */
 
-
 	/**
 	 * Sets this Color object's Hue, Saturation, & Brightness
 	 * as floats from 0.0 to 1.0
@@ -334,6 +347,7 @@ public class Color implements BufferUtils {
 	 * @param hue        The Color's hue
 	 * @param saturation The Color's saturation
 	 * @param brightness The Color's brightness
+	 *
 	 * @return This color object, freshly set
 	 */
 	public Color hsb(float hue, float saturation, float brightness) {
@@ -347,6 +361,7 @@ public class Color implements BufferUtils {
 	 * @param red   The Color's red value
 	 * @param green The Color's green value
 	 * @param blue  The Color's blue value
+	 *
 	 * @return This color object, freshly set
 	 */
 	public Color rgb(float red, float green, float blue) {
@@ -360,6 +375,7 @@ public class Color implements BufferUtils {
 	 * @param red   The Color's red value
 	 * @param green The Color's green value
 	 * @param blue  The Color's blue value
+	 *
 	 * @return This color object, freshly set
 	 */
 	public Color rgb(int red, int green, int blue) {
@@ -374,6 +390,7 @@ public class Color implements BufferUtils {
 	 * do not equal zero.
 	 *
 	 * @param hex color as a 32-bit integer
+	 *
 	 * @return This color object, freshly set
 	 */
 	public Color hex(int hex) {
@@ -390,12 +407,14 @@ public class Color implements BufferUtils {
 	 *
 	 * @param hex    color as a 32-bit integer
 	 * @param format the format of the integer color
+	 *
 	 * @return This color object, freshly set
 	 */
 	public Color hex(int hex, HexFormat format) {
 		int alpha = format.getAlphaInt(hex);
-		if (alpha != 0)
+		if (alpha != 0) {
 			alpha(alpha);
+		}
 		return red(format.getRedInt(hex)).green(format.getGreenInt(hex)).blue(format.getBlueInt(hex));
 	}
 
@@ -404,11 +423,11 @@ public class Color implements BufferUtils {
      * Individual Setters - sets each individual color format value
      */
 
-
 	/**
 	 * Sets the Color's Hue as a float
 	 *
 	 * @param hue The Hue between 0.0 and 1.0
+	 *
 	 * @return This color object, freshly set
 	 */
 	public Color hue(float hue) {
@@ -421,6 +440,7 @@ public class Color implements BufferUtils {
 	 * Sets the Color's Saturation as a float
 	 *
 	 * @param saturation The Saturation between 0.0 and 1.0
+	 *
 	 * @return This color object, freshly set
 	 */
 	public Color saturation(float saturation) {
@@ -433,6 +453,7 @@ public class Color implements BufferUtils {
 	 * Sets the Color's Brightness as a float
 	 *
 	 * @param brightness The Brightness between 0.0 and 1.0
+	 *
 	 * @return This color object, freshly set
 	 */
 	public Color brightness(float brightness) {
@@ -445,6 +466,7 @@ public class Color implements BufferUtils {
 	 * Sets the Color's Red as a float
 	 *
 	 * @param red The Red between 0.0 and 1.0
+	 *
 	 * @return This color object, freshly set
 	 */
 	public Color red(float red) {
@@ -457,6 +479,7 @@ public class Color implements BufferUtils {
 	 * Sets the Color's Green as a float
 	 *
 	 * @param green The Green between 0.0 and 1.0
+	 *
 	 * @return This color object, freshly set
 	 */
 	public Color green(float green) {
@@ -469,6 +492,7 @@ public class Color implements BufferUtils {
 	 * Sets the Color's Blue as a float
 	 *
 	 * @param blue The Blue between 0.0 and 1.0
+	 *
 	 * @return This color object, freshly set
 	 */
 	public Color blue(float blue) {
@@ -481,6 +505,7 @@ public class Color implements BufferUtils {
 	 * Sets the Color's Red as an integer
 	 *
 	 * @param red The Red between 0 and 255
+	 *
 	 * @return This color object, freshly set
 	 */
 	public Color red(int red) {
@@ -493,6 +518,7 @@ public class Color implements BufferUtils {
 	 * Sets the Color's Green as an integer
 	 *
 	 * @param green The Green between 0 and 255
+	 *
 	 * @return This color object, freshly set
 	 */
 	public Color green(int green) {
@@ -505,6 +531,7 @@ public class Color implements BufferUtils {
 	 * Sets the Color's Blue as an integer
 	 *
 	 * @param blue The Blue between 0 and 255
+	 *
 	 * @return This color object, freshly set
 	 */
 	public Color blue(int blue) {
@@ -517,6 +544,7 @@ public class Color implements BufferUtils {
 	 * Sets the Color's Alpha as a float
 	 *
 	 * @param alpha The Alpha between 0.0 and 1.0
+	 *
 	 * @return This color object, freshly set
 	 */
 	public Color alpha(float alpha) {
@@ -528,6 +556,7 @@ public class Color implements BufferUtils {
 	 * Sets the Color's Alpha as an integer
 	 *
 	 * @param alpha The Alpha between 0 and 255
+	 *
 	 * @return This color object, freshly set
 	 */
 	public Color alpha(int alpha) {
@@ -540,7 +569,6 @@ public class Color implements BufferUtils {
      * "one-step-behind" color formats and ensure that at least one
      * color format is up-to-date at any given time.
      */
-
 
 	private Color onSetHSB() {
 		updateHSB();
@@ -569,7 +597,6 @@ public class Color implements BufferUtils {
      * variety of formats. Each call checks to make sure the requested
      * Color format is available, and if not, converts it
      */
-
 
 	/**
 	 * @return The Hue component of this Color between 0.0 and 1.0
@@ -666,6 +693,7 @@ public class Color implements BufferUtils {
 
 	/**
 	 * @param format The format of hex you would like this color in
+	 *
 	 * @return This Color as a 32-bit integer, with alpha
 	 */
 	public int getHex(HexFormat format) {
@@ -723,7 +751,6 @@ public class Color implements BufferUtils {
 	 * Misc. Functions:
 	 */
 
-
 	/**
 	 * Private shorthand for quick clamping of color input. Normally,
 	 * OpenGL will do this automatically with glColor, but because
@@ -734,6 +761,7 @@ public class Color implements BufferUtils {
 	 * @param toClamp The value to clamp
 	 * @param low     The lower bound of our clamp operation
 	 * @param high    The upper bound of our clamp operation
+	 *
 	 * @return the clamped float
 	 */
 	private float clamp(float toClamp, float low, float high) {
@@ -750,10 +778,18 @@ public class Color implements BufferUtils {
 	 * @param toClamp The value to clamp
 	 * @param low     The lower bound of our clamp operation
 	 * @param high    The upper bound of our clamp operation
+	 *
 	 * @return the clamped float
 	 */
 	private int clamp(int toClamp, int low, int high) {
 		return Math.max(Math.min(toClamp, high), low);
+	}
+
+	/**
+	 * @return a deep copy of this color that can be mutated separately
+	 */
+	public Color copy() {
+		return Color.fromRGB(getRedInt(), getGreenInt(), getBlueInt());
 	}
 
 
@@ -762,7 +798,6 @@ public class Color implements BufferUtils {
      * with SOMETHING before you start calling getters
      */
 
-
 	/**
 	 * Creates a Color object with an initial Hue, Saturation, and Brightness.
 	 * This Color's Alpha will default to 1F (fully opaque)
@@ -770,6 +805,7 @@ public class Color implements BufferUtils {
 	 * @param hue        The Hue component between 0.0 and 1.0
 	 * @param saturation The Saturation component between 0.0 and 1.0
 	 * @param brightness The Brightness component between 0.0 and 1.0
+	 *
 	 * @return The newly created Color object
 	 */
 	public static Color fromHSB(float hue, float saturation, float brightness) {
@@ -783,6 +819,7 @@ public class Color implements BufferUtils {
 	 * @param red   The Red component between 0.0 and 1.0
 	 * @param green The Green component between 0.0 and 1.0
 	 * @param blue  The Blue component between 0.0 and 1.0
+	 *
 	 * @return The newly created Color object
 	 */
 	public static Color fromRGB(float red, float green, float blue) {
@@ -796,6 +833,7 @@ public class Color implements BufferUtils {
 	 * @param red   The Red component between 0 and 255
 	 * @param green The Green component between 0 and 255
 	 * @param blue  The Blue component between 0 and 255
+	 *
 	 * @return The newly created Color object
 	 */
 	public static Color fromRGB(int red, int green, int blue) {
@@ -808,12 +846,12 @@ public class Color implements BufferUtils {
 	 * hex bits 24-32 are not set
 	 *
 	 * @param color 32-bit integer in the format 'ARGB'
+	 *
 	 * @return The newly created Color object
 	 */
 	public static Color fromHex(int color) {
 		return new Color().hex(color);
 	}
-
 
 	/**
 	 * Hex Format Enum
