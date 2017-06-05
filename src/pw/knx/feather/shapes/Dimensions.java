@@ -6,7 +6,7 @@ package pw.knx.feather.shapes;
  * We decided to create our own shape structures because LWJGL's and the JDK's
  * did not suit the conventions of the Feather library.
  * <p>
- * In proper Feather convention, the setters in this class return itself
+ * In standard Feather convention, the setters in this class return itself
  * to allow for efficient and readable method chaining.
  *
  * @author KNOXDEV
