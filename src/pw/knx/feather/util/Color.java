@@ -412,9 +412,8 @@ public class Color implements BufferUtils {
 	 */
 	public Color hex(int hex, HexFormat format) {
 		int alpha = format.getAlphaInt(hex);
-		if (alpha != 0) {
+		if (alpha != 0)
 			alpha(alpha);
-		}
 		return red(format.getRedInt(hex)).green(format.getGreenInt(hex)).blue(format.getBlueInt(hex));
 	}
 
