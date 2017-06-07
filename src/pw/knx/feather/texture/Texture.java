@@ -8,7 +8,7 @@ import pw.knx.feather.tessellate.base.Tessellator;
  * <p>
  * In addition, this interface contains construction methods that can be called intuitively:
  * Texture.from();
- * ...rather than needing to know to use 'new BasicTexture()'
+ * ...rather than needing to know to use 'new ***Texture()'
  *
  * @author KNOXDEV
  * @since 8/8/2016 23:53
@@ -18,37 +18,37 @@ public interface Texture {
 	/**
 	 * @return the OpenGL Texture ID
 	 */
-	int getID();
+	int id();
 
 	/**
 	 * @return the x coordinate of the top-left texture point, on a float scale from 0 to 1.0
 	 */
-	float getU();
+	float u();
 
 	/**
 	 * @return the y coordinate of the top-left texture point, on a float scale from 0 to 1.0
 	 */
-	float getV();
+	float v();
 
 	/**
 	 * @return the x coordinate of the bottom-right texture point, on a float scale from 0 to 1.0
 	 */
-	float getU1();
+	float u1();
 
 	/**
 	 * @return the y coordinate of the bottom-right texture point, on a float scale from 0 to 1.0
 	 */
-	float getV1();
+	float v1();
 
 	/**
 	 * @return the width of the texture rendering in pixels
 	 */
-	float getWidth();
+	float width();
 
 	/**
 	 * @return the height of the texture rendering in pixels
 	 */
-	float getHeight();
+	float height();
 
 	/**
 	 * @param id The OpenGL Texture object ID

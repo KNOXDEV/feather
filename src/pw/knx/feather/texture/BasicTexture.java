@@ -54,7 +54,7 @@ public class BasicTexture implements Texture {
 	 * @return the OpenGL Texture ID
 	 */
 	@Override
-	public int getID() {
+	public int id() {
 		return this.texID;
 	}
 
@@ -62,7 +62,7 @@ public class BasicTexture implements Texture {
 	 * @return the x coordinate of the top-left texture point, on a float scale from 0 to 1.0
 	 */
 	@Override
-	public float getU() {
+	public float u() {
 		return this.u;
 	}
 
@@ -70,7 +70,7 @@ public class BasicTexture implements Texture {
 	 * @return the y coordinate of the top-left texture point, on a float scale from 0 to 1.0
 	 */
 	@Override
-	public float getV() {
+	public float v() {
 		return this.v;
 	}
 
@@ -78,7 +78,7 @@ public class BasicTexture implements Texture {
 	 * @return the x coordinate of the bottom-right texture point, on a float scale from 0 to 1.0
 	 */
 	@Override
-	public float getU1() {
+	public float u1() {
 		return this.u1;
 	}
 
@@ -86,7 +86,7 @@ public class BasicTexture implements Texture {
 	 * @return the y coordinate of the bottom-right texture point, on a float scale from 0 to 1.0
 	 */
 	@Override
-	public float getV1() {
+	public float v1() {
 		return this.v1;
 	}
 
@@ -94,7 +94,7 @@ public class BasicTexture implements Texture {
 	 * @return the width of the texture rendering in pixels
 	 */
 	@Override
-	public float getWidth() {
+	public float width() {
 		return this.width;
 	}
 
@@ -102,7 +102,7 @@ public class BasicTexture implements Texture {
 	 * @return the height of the texture rendering in pixels
 	 */
 	@Override
-	public float getHeight() {
+	public float height() {
 		return this.height;
 	}
 
