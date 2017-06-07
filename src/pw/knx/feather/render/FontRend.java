@@ -247,20 +247,20 @@ public class FontRend {
 			* Tessellator's vertex array must be drawn before switching textures, otherwise they would erroneously use the new
 			* texture as well.
 			*/
-			if (boundTex != texture.getID()) {
+			if (boundTex != texture.id()) {
 				if (boundTex != 0)
 					tess.draw(GL11.GL_QUADS);
-				GL11.glBindTexture(GL11.GL_TEXTURE_2D, texture.getID());
-				boundTex = texture.getID();
+				GL11.glBindTexture(GL11.GL_TEXTURE_2D, texture.id());
+				boundTex = texture.id();
 			}
 			final float x1 = x + glyph.x;
-			final float x2 = x1 + texture.getWidth();
+			final float x2 = x1 + texture.width();
 			final float y1 = y + glyph.y;
-			final float y2 = y1 + texture.getHeight();
-			tess.texture(texture.getU(), texture.getV()).vertex(x1, y1, 0);
-			tess.texture(texture.getU(), texture.getV1()).vertex(x1, y2, 0);
-			tess.texture(texture.getU1(), texture.getV1()).vertex(x2, y2, 0);
-			tess.texture(texture.getU1(), texture.getV()).vertex(x2, y1, 0);
+			final float y2 = y1 + texture.height();
+			tess.texture(texture.u(), texture.v()).vertex(x1, y1, 0);
+			tess.texture(texture.u(), texture.v1()).vertex(x1, y2, 0);
+			tess.texture(texture.u1(), texture.v1()).vertex(x2, y2, 0);
+			tess.texture(texture.u1(), texture.v()).vertex(x2, y1, 0);
 		}
 
 		/* Draw any remaining glyphs in the Tessellator's vertex array (there should be at least one glyph pending) */
@@ -746,7 +746,7 @@ public class FontRend {
 		 */
 		@Override
 		public int compareTo(Glyph o) {
-			return (this.texture.getID() == o.texture.getID()) ? 0 : 1;
+			return (this.texture.id() == o.texture.id()) ? 0 : 1;
 		}
 	}
 }
