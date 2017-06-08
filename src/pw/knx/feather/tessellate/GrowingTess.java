@@ -60,7 +60,7 @@ public class GrowingTess extends BasicTess {
 	 * @return The original Tessellator Object
 	 */
 	@Override
-	public Tessellator vertex(float x, float y, float z) {
+	public Tessellator addVertex(float x, float y, float z) {
 		int capacity = raw.length;
 		if (index * 6 >= capacity * ratio) {                         // if we've hit our capacity limit
 			capacity *= factor;                                 // raise our limit by the amount specified
@@ -71,6 +71,6 @@ public class GrowingTess extends BasicTess {
 			iBuffer = buffer.asIntBuffer();
 			fBuffer = buffer.asFloatBuffer();
 		}
-		return super.vertex(x, y, z);
+		return super.addVertex(x, y, z);
 	}
 }

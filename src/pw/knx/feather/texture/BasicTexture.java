@@ -44,8 +44,8 @@ public class BasicTexture implements Texture {
 	 */
 	@Override
 	public Texture draw(Tessellator tess, int mode, float x, float y) {
-		tess.texture(u1, v).vertex(x + width, y, 0).texture(u, v).vertex(x, y, 0);
-		tess.texture(u, v1).vertex(x, y + height, 0).texture(u1, v1).vertex(x + width, y + height, 0);
+		tess.setTexture(u1, v).addVertex(x + width, y, 0).setTexture(u, v).addVertex(x, y, 0);
+		tess.setTexture(u, v1).addVertex(x, y + height, 0).setTexture(u1, v1).addVertex(x + width, y + height, 0);
 		tess.draw(mode);
 		return this;
 	}

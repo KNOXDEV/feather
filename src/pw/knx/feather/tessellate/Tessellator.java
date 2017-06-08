@@ -17,14 +17,14 @@ public interface Tessellator {
 	 *              NOTE: Must be in ABGR format
 	 * @return The original Tessellator Object
 	 */
-	Tessellator color(int color);
+	Tessellator setColor(int color);
 
 	/**
 	 * @param color The color to associate the upcoming vertex data with
 	 * @return The original Tessellator Object
 	 */
-	default Tessellator color(Color color) {
-		return color(color.getHex(Color.HexFormat.ABGR));
+	default Tessellator setColor(Color color) {
+		return setColor(color.getHex(Color.HexFormat.ABGR));
 	}
 
 	/**
@@ -34,7 +34,7 @@ public interface Tessellator {
 	 * @param v The y starting coordinate
 	 * @return The original Tessellator Object
 	 */
-	Tessellator texture(float u, float v);
+	Tessellator setTexture(float u, float v);
 
 	/**
 	 * Enters a vertex of the shape to be rendered.
@@ -46,7 +46,7 @@ public interface Tessellator {
 	 * @param z The z coordinate of this vertex
 	 * @return The original Tessellator Object
 	 */
-	Tessellator vertex(float x, float y, float z);
+	Tessellator addVertex(float x, float y, float z);
 
 	/**
 	 * The first stage of rendering.
@@ -94,7 +94,8 @@ public interface Tessellator {
 
 	/**
 	 * Performs all three rendering stages in one method.
-	 * This method cannot be run more than once without entering new data.
+	 * This method cannot be run more than once without entering new data,
+	 * due to the fact it resets the buffer.
 	 *
 	 * @param mode The OpenGL mode to render the data with
 	 * @return The original Tessellator Object

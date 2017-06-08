@@ -82,7 +82,7 @@ public class BasicTess implements Tessellator, BufferUtils {
 	 * @return The original Tessellator Object
 	 */
 	@Override
-	public Tessellator color(int color) {
+	public Tessellator setColor(int color) {
 		this.color = true;
 		this.colors = color;
 		return this;
@@ -96,7 +96,7 @@ public class BasicTess implements Tessellator, BufferUtils {
 	 * @return The original Tessellator Object
 	 */
 	@Override
-	public Tessellator texture(float u, float v) {
+	public Tessellator setTexture(float u, float v) {
 		this.texture = true;
 		this.texU = u;
 		this.texV = v;
@@ -114,7 +114,7 @@ public class BasicTess implements Tessellator, BufferUtils {
 	 * @return The original Tessellator Object
 	 */
 	@Override
-	public Tessellator vertex(float x, float y, float z) {
+	public Tessellator addVertex(float x, float y, float z) {
 		final int dex = this.index * 6;
 		this.raw[dex] = Float.floatToRawIntBits(x);
 		this.raw[dex + 1] = Float.floatToRawIntBits(y);

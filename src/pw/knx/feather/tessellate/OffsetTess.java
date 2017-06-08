@@ -56,8 +56,8 @@ public class OffsetTess implements Tessellator {
 	 * @return The original Tessellator Object
 	 */
 	@Override
-	public Tessellator color(int color) {
-		tess.color(color);
+	public Tessellator setColor(int color) {
+		tess.setColor(color);
 		return this;
 	}
 
@@ -71,8 +71,8 @@ public class OffsetTess implements Tessellator {
 	 * @return The original Tessellator Object
 	 */
 	@Override
-	public Tessellator texture(float u, float v) {
-		tess.texture(u, v);
+	public Tessellator setTexture(float u, float v) {
+		tess.setTexture(u, v);
 		return this;
 	}
 
@@ -89,8 +89,8 @@ public class OffsetTess implements Tessellator {
 	 * @return The original Tessellator Object
 	 */
 	@Override
-	public Tessellator vertex(float x, float y, float z) {
-		tess.vertex(x, y, z);
+	public Tessellator addVertex(float x, float y, float z) {
+		tess.addVertex(x, y, z);
 		return this;
 	}
 

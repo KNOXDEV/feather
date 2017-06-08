@@ -257,10 +257,10 @@ public class FontRend {
 			final float x2 = x1 + texture.width();
 			final float y1 = y + glyph.y;
 			final float y2 = y1 + texture.height();
-			tess.texture(texture.u(), texture.v()).vertex(x1, y1, 0);
-			tess.texture(texture.u(), texture.v1()).vertex(x1, y2, 0);
-			tess.texture(texture.u1(), texture.v1()).vertex(x2, y2, 0);
-			tess.texture(texture.u1(), texture.v()).vertex(x2, y1, 0);
+			tess.setTexture(texture.u(), texture.v()).addVertex(x1, y1, 0);
+			tess.setTexture(texture.u(), texture.v1()).addVertex(x1, y2, 0);
+			tess.setTexture(texture.u1(), texture.v1()).addVertex(x2, y2, 0);
+			tess.setTexture(texture.u1(), texture.v()).addVertex(x2, y1, 0);
 		}
 
 		/* Draw any remaining glyphs in the Tessellator's vertex array (there should be at least one glyph pending) */
