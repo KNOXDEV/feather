@@ -1,6 +1,6 @@
 package pw.knx.feather.tessellate;
 
-import pw.knx.feather.util.Color;
+import pw.knx.feather.structures.Color;
 
 /**
  * A standard abstract interface for an OpenGL Tessellator.
