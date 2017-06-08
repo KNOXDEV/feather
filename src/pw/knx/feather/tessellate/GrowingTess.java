@@ -1,5 +1,7 @@
 package pw.knx.feather.tessellate;
 
+import static pw.knx.feather.Feather.feather;
+
 /**
  * An automatically resizing implementation of the Tessellator interface.
  * <p>
@@ -67,7 +69,7 @@ public class GrowingTess extends BasicTess {
 			final int[] newBuffer = new int[capacity];          // allocate the new data
 			System.arraycopy(raw, 0, newBuffer, 0, raw.length); // transfer the data from the old array to the new array
 			raw = newBuffer;                                    // replace the array
-			buffer = buff.createDirectBuffer(capacity * 4);       // allocate a new corresponding ByteBuffer
+			buffer = feather.allocateBuffer(capacity * 4);       // allocate a new corresponding ByteBuffer
 			iBuffer = buffer.asIntBuffer();
 			fBuffer = buffer.asFloatBuffer();
 		}

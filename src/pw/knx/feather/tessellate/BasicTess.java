@@ -1,11 +1,12 @@
 package pw.knx.feather.tessellate;
 
 import org.lwjgl.opengl.GL11;
-import pw.knx.feather.util.BufferUtils;
 
 import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
+
+import static pw.knx.feather.Feather.feather;
 
 /**
  * A standard implementation of the Tessellator interface.
@@ -20,7 +21,7 @@ import java.nio.IntBuffer;
  * @author KNOXDEV
  * @since 8/9/2016 03:00
  */
-public class BasicTess implements Tessellator, BufferUtils {
+public class BasicTess implements Tessellator {
 
 	/**
 	 * Tracks the current index in the total data buffer that we're on
@@ -72,7 +73,7 @@ public class BasicTess implements Tessellator, BufferUtils {
 		 * takes up in the buffer, since each vertex stores color and texture as well. */
 		capacity *= 6;
 		this.raw = new int[capacity];
-		this.buffer = buff.createDirectBuffer(capacity * 4); // 4 bytes in an integer!
+		this.buffer = feather.allocateBuffer(capacity * 4); // 4 bytes in an integer!
 		this.fBuffer = this.buffer.asFloatBuffer();
 		this.iBuffer = this.buffer.asIntBuffer();
 	}

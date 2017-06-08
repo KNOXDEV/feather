@@ -22,7 +22,7 @@ package pw.knx.feather.util;
  * @author KNOXDEV
  * @since 9/8/2016 21:41
  */
-public class Color implements BufferUtils {
+public class Color {
 
 	/**
 	 * In this class, we store alpha separately and persistently,
