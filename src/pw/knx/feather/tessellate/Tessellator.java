@@ -28,28 +28,6 @@ public interface Tessellator {
 	}
 
 	/**
-	 * @param red   The red component of the color to bind
-	 * @param green The green component of the color to bind
-	 * @param blue  The blue component of the color to bind
-	 * @param alpha The alpha component of the color to bind
-	 * @return The original Tessellator Object
-	 */
-	default Tessellator color(int red, int green, int blue, int alpha) {
-		return color(Color.HexFormat.ABGR.getHex(red, green, blue, alpha));
-	}
-
-	/**
-	 * @param red   The red component of the color to bind
-	 * @param green The green component of the color to bind
-	 * @param blue  The blue component of the color to bind
-	 * @param alpha The alpha component of the color to bind
-	 * @return The original Tessellator Object
-	 */
-	default Tessellator color(float red, float green, float blue, float alpha) {
-		return color((int) (red * 255), (int) (green * 255), (int) (blue * 255), (int) (alpha * 255));
-	}
-
-	/**
 	 * Set the texture coordinates to associate the upcoming vertex data with.
 	 *
 	 * @param u The x starting coordinate
