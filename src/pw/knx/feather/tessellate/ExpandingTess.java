@@ -12,37 +12,26 @@ import static pw.knx.feather.Feather.feather;
  * @author KNOXDEV
  * @since 8/9/2016 03:00
  */
-public class GrowingTess extends BasicTess {
+public class ExpandingTess extends BasicTess {
 
 	/**
 	 * The target ratio, between 0 and 1.0, that this Tessellator must hit before it grows.
 	 */
-	final float ratio;
+	private final float ratio;
 
 	/**
 	 * The factor of which this Tessellator will grow when it hits the ratio.
 	 */
-	final float factor;
+	private final float factor;
 
 	/**
-	 * Constructs a Growing Tessellator. See Class Documentation for more information.
-	 * By default, a GrowingTess's capacity will double every time it hits its maximum capacity.
-	 * Use the alternate constructor if you wish to change this behavior.
-	 *
-	 * @param initial The total initial capacity, in whole vertices.
-	 */
-	public GrowingTess(int initial) {
-		this(initial, 1, 2);
-	}
-
-	/**
-	 * Constructs a Growing Tessellator. See Class Documentation for more information.
+	 * Constructs an Expanding Tessellator. See Class Documentation for more information.
 	 *
 	 * @param initial The total initial capacity, in whole vertices.
 	 * @param ratio   The target ratio, between 0 and 1.0, that this Tessellator must hit before it grows.
 	 * @param factor  The factor of which this Tessellator will grow when it hits the ratio.
 	 */
-	public GrowingTess(int initial, float ratio, float factor) {
+	ExpandingTess(int initial, float ratio, float factor) {
 		super(initial);
 		this.ratio = ratio;
 		this.factor = factor;

@@ -14,7 +14,7 @@ import static pw.knx.feather.Feather.feather;
  * The most noteworthy point to make about this Tessellator is that it *will not grow*.
  * Its size is final from the moment it's instantiated. If you attempt to add more data
  * than it can hold, it will throw an error. To create an automatically resizing
- * Tessellator, use the GrowingTess implementation, also found in this package.
+ * Tessellator, use the ExpandingTess implementation, also found in this package.
  * <p>
  * The voids in this interface return the Tessellator object for easy method chaining.
  *
@@ -26,27 +26,27 @@ public class BasicTess implements Tessellator {
 	/**
 	 * Tracks the current index in the total data buffer that we're on
 	 */
-	protected int index;
+	int index;
 
 	/**
 	 * The raw array of integers that stores vertex information
 	 */
-	protected int[] raw;
+	int[] raw;
 
 	/**
 	 * A byte buffer mainly utilized as a vehicle for transferring the raw data to OpenGL upon binding
 	 */
-	protected ByteBuffer buffer;
+	ByteBuffer buffer;
 
 	/**
 	 * A float buffer view of the main byte buffer
 	 */
-	protected FloatBuffer fBuffer;
+	FloatBuffer fBuffer;
 
 	/**
 	 * A integer buffer view of the main byte buffer
 	 */
-	protected IntBuffer iBuffer;
+	IntBuffer iBuffer;
 
 	/**
 	 * An integer storing our main color data for this vertex
@@ -68,7 +68,7 @@ public class BasicTess implements Tessellator {
 	 *
 	 * @param capacity The total capacity, in whole verticies, that this Tessellator will be able to render at once.
 	 */
-	public BasicTess(int capacity) {
+	BasicTess(int capacity) {
 		/** Why times 6? Because 6 is how much space (in integers) that each vertex
 		 * takes up in the buffer, since each vertex stores color and texture as well. */
 		capacity *= 6;

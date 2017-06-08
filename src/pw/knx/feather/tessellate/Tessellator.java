@@ -12,6 +12,11 @@ import pw.knx.feather.util.Color;
  */
 public interface Tessellator {
 
+
+	/*
+	 * Setters - Setting and adding values to this tessellator
+	 */
+
 	/**
 	 * @param color The color to associate the upcoming vertex data with
 	 *              NOTE: Must be in ABGR format
@@ -38,7 +43,7 @@ public interface Tessellator {
 
 	/**
 	 * Enters a vertex of the shape to be rendered.
-	 * All data fed to the Tessellator revolves around the vertex data,
+	 * All data fed to the Tessellator relies on the vertex data,
 	 * as it is the only information absolutely necessary to render a shape.
 	 *
 	 * @param x The x coordinate of this vertex
@@ -47,6 +52,12 @@ public interface Tessellator {
 	 * @return The original Tessellator Object
 	 */
 	Tessellator addVertex(float x, float y, float z);
+
+
+	/*
+	 * Render Commands - These provide fine-tuned control over the
+	 * three-stage render process, if needed
+	 */
 
 	/**
 	 * The first stage of rendering.
@@ -102,5 +113,32 @@ public interface Tessellator {
 	 */
 	default Tessellator draw(int mode) {
 		return this.bind().pass(mode).reset();
+	}
+
+
+	/*
+	 * Static Constructors - allows intuitive initialization of a Tessellator to fit any purpose
+	 */
+
+	/**
+	 * Creates an <i>immutable</i> Tessellator that will not grow past its initial capacity
+	 *
+	 * @param size the initial (and final) capacity of this Tessellator
+	 * @return the requested Basic Tessellator
+	 */
+	static Tessellator createBasic(int size) {
+		return new BasicTess(size);
+	}
+
+	/**
+	 * Creates a growing Tessellator that will increase in capacity as its limit is reached
+	 *
+	 * @param size the initial capacity of this Tessellator
+	 * @param ratio   The target ratio, between 0 and 1.0, that this Tessellator must hit before it grows.
+	 * @param factor  The factor of which this Tessellator will grow when it hits the ratio.
+	 * @return the requested Basic Tessellator
+	 */
+	static Tessellator createExpanding(int size, float ratio, float factor) {
+		return new ExpandingTess(size, ratio, factor);
 	}
 }

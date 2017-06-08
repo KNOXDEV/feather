@@ -1,7 +1,6 @@
 package pw.knx.feather.render;
 
 import org.lwjgl.opengl.GL11;
-import pw.knx.feather.tessellate.GrowingTess;
 import pw.knx.feather.tessellate.Tessellator;
 import pw.knx.feather.texture.Texture;
 
@@ -179,7 +178,7 @@ public class FontRend {
 	/**
 	 * The simple Feather Tessellator we've designated to render our glyphs.
 	 */
-	private final Tessellator tess = new GrowingTess(4 * 4);
+	private final Tessellator tess = Tessellator.createExpanding(4 * 4, 1, 2);
 
 	/**
 	 * A simple list of glyphs we're currently working with
