@@ -1,4 +1,4 @@
-package pw.knx.feather.util;
+package pw.knx.feather.structures;
 
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL15;

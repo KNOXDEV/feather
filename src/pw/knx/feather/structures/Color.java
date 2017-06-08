@@ -1,4 +1,4 @@
-package pw.knx.feather.util;
+package pw.knx.feather.structures;
 
 /**
  * A simple objectual representation of a Color.
