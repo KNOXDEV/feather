@@ -17,9 +17,9 @@ public class Dimensions {
 	private int width, height;
 
 
-	/* #####################
-	 *  Getters
-	 * ##################### */
+	/*
+	 * Getters - For retrieving internal values
+	 */
 
 	/**
 	 * @return this shape's width
@@ -36,9 +36,9 @@ public class Dimensions {
 	}
 
 
-	/* #####################
-	 *  Setters
-	 * ##################### */
+	/*
+	 * Setters - For setting internal values
+	 */
 
 	/**
 	 * Set this shape's width
@@ -84,9 +84,9 @@ public class Dimensions {
 	}
 
 
-	/* #####################
-	 *  Modifiers
-	 * ##################### */
+	/*
+	 * Modifiers - For now, just an offset shorthand method
+	 */
 
 	/**
 	 * Offset this shape by the width and height provided

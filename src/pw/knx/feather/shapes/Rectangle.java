@@ -18,9 +18,9 @@ public class Rectangle {
 	private int x, y, width, height;
 
 
-	/* #####################
-	 *  Getters
-	 * ##################### */
+	/*
+	 * Getters - For retrieving internal values, some literal, some logical (such as x1, etc.)
+	 */
 
 	/**
 	 * @return this shape's x-position
@@ -65,9 +65,9 @@ public class Rectangle {
 	}
 
 
-	/* #####################
-	 *  Setters
-	 * ##################### */
+	/*
+	 * Setters - For setting internal values, some literal, some logical (such as x1, etc.)
+	 */
 
 	/**
 	 * Set this shape's x-position
@@ -157,9 +157,9 @@ public class Rectangle {
 	}
 
 
-	/* #####################
-	 *  Modifiers
-	 * ##################### */
+	/*
+	 * Modifiers - Mostly just short hands for common adjustment operations
+	 */
 
 	/**
 	 * Offset this shape by the x and y provided
@@ -208,9 +208,9 @@ public class Rectangle {
 	}
 
 
-	/* #####################
-	 *  Misc.
-	 * ##################### */
+	/*
+	 * Misc. Functions:
+	 */
 
 	/**
 	 * Checks if the provided point is inside the bounds of this shape, inclusive
