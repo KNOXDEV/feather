@@ -1,7 +1,6 @@
 package pw.knx.feather.tessellate;
 
 import org.lwjgl.opengl.GL11;
-import pw.knx.feather.tessellate.base.Tessellator;
 
 /**
  * An easily translatable implementation of the Tessellator interface.

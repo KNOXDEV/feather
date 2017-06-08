@@ -1,7 +1,6 @@
 package pw.knx.feather.tessellate;
 
 import org.lwjgl.opengl.GL11;
-import pw.knx.feather.tessellate.base.Tessellator;
 import pw.knx.feather.util.BufferUtils;
 
 import java.nio.ByteBuffer;

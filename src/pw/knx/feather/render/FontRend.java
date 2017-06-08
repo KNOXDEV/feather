@@ -2,7 +2,7 @@ package pw.knx.feather.render;
 
 import org.lwjgl.opengl.GL11;
 import pw.knx.feather.tessellate.GrowingTess;
-import pw.knx.feather.tessellate.base.Tessellator;
+import pw.knx.feather.tessellate.Tessellator;
 import pw.knx.feather.texture.Texture;
 
 import java.awt.*;

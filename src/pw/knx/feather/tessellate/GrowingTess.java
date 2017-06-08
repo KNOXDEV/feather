@@ -1,7 +1,5 @@
 package pw.knx.feather.tessellate;
 
-import pw.knx.feather.tessellate.base.Tessellator;
-
 /**
  * An automatically resizing implementation of the Tessellator interface.
  * <p>

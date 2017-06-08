@@ -1,6 +1,6 @@
 package pw.knx.feather.texture;
 
-import pw.knx.feather.tessellate.base.Tessellator;
+import pw.knx.feather.tessellate.Tessellator;
 
 /**
  * A simple OpenGL Texture interface

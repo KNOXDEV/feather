@@ -1,4 +1,4 @@
-package pw.knx.feather.tessellate.base;
+package pw.knx.feather.tessellate;
 
 import pw.knx.feather.util.Color;
 
