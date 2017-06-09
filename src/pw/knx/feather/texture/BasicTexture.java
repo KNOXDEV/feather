@@ -3,6 +3,8 @@ package pw.knx.feather.texture;
 import org.lwjgl.opengl.GL11;
 import pw.knx.feather.tessellate.Tessellator;
 
+import static pw.knx.feather.Feather.feather;
+
 /**
  * A simple implementation of our OpenGL Texture interface
  * The setters in this class return the Texture object for easy method chaining
@@ -29,7 +31,7 @@ public class BasicTexture implements Texture {
 	 */
 	@Override
 	public Texture bind() {
-		GL11.glBindTexture(GL11.GL_TEXTURE_2D, texID);
+		feather.bindTexture(texID);
 		return this;
 	}
 
