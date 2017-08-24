@@ -1,5 +1,6 @@
 package pw.knx.feather;
 
+import pw.knx.feather.animate.Animator;
 import pw.knx.feather.font.FontCache;
 import pw.knx.feather.font.FontGlyph;
 import pw.knx.feather.font.GlyphLayout;
@@ -33,7 +34,7 @@ import static org.lwjgl.opengl.GL15.*;
  * @since 6/7/2017 6:54 PM
  */
 public enum Feather {
-	feather;
+	FEATHER;
 
 	/**
 	 * The simple Feather Tessellator we've designated to render our glyphs.
@@ -42,6 +43,11 @@ public enum Feather {
 
 	private final Map<Font, FontCache> fonts = new HashMap<>();
 	private FontCache currentFont;
+
+	/**
+	 * Our stored global Animator instance.
+	 */
+	private final Animator animator = new Animator();
 
 
 	/*
@@ -134,5 +140,14 @@ public enum Feather {
 		tess.draw(GL_QUADS);
 
 		return this;
+	}
+
+
+	/*
+	 * Animation library related syntactical sugar
+	 */
+
+	public Animator animate() {
+		return animator;
 	}
 }

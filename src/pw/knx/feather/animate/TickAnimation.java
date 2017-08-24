@@ -25,7 +25,7 @@ public class TickAnimation {
 	/**
 	 * An integer representing your current animation duration. Stored in "ticks"
 	 */
-	protected int duration = 20;
+	int duration = 20;
 
 	/**
 	 * True if the animation is playing from 0-1.0, false if from 1.0-0
@@ -40,7 +40,7 @@ public class TickAnimation {
 	/**
 	 * The internal double representing your actual progress thus far
 	 */
-	protected double progress = 0;
+	double progress = 0;
 
 	/**
 	 * Sets the animation to progress.
@@ -98,7 +98,7 @@ public class TickAnimation {
 	}
 
 	/**
-	 * @param transition the transition you wish to set your currentl Animation to
+	 * @param transition the transition you wish to set your current Animation to
 	 * @return the original Animation object
 	 */
 	public TickAnimation setTransition(Transition transition) {
