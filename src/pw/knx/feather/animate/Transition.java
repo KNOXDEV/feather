@@ -62,19 +62,16 @@ public enum Transition {
 	 * INERTIA is an interesting little function reminiscent of a bell curve:
 	 * it starts out slow and ends slow, but the middle is fast. This style usually
 	 * looks the most professional and sleek both ways.
+	 *
+	 * The magic number is precalculated for performance: 2/Math.cbrt(2)
 	 */
-	INERTIA(a -> Math.cbrt(a - 0.5) / Transition.INERTIA_CONST + 0.5),
+	INERTIA(a -> Math.cbrt(a - 0.5) / (1.5874010519681994)),
 
 	/**
 	 * INSTANT clamps the progress to a whole number, resulting in an animation
 	 * that's over as soon as it starts.
 	 */
 	INSTANT(a -> (double) Math.round(a));
-
-	/**
-	 * A magic number that's used for the INERTIA transition
-	 */
-	final static double INERTIA_CONST = Math.cbrt(0.5) / 0.5;
 
 	/**
 	 * The internal functional relationship between a transition's input and output
