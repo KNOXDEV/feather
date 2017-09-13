@@ -78,21 +78,6 @@ public enum Feather {
 
 
 	/*
-	 * Allocators - Methods that wrap Java's unfortunate Buffer API
-	 */
-
-	/**
-	 * Allocates a ByteBuffer in the platform's native byte order
-	 *
-	 * @param capacity the size of the Buffer to be allocated in bytes
-	 * @return the allocated ByteBuffer
-	 */
-	public synchronized ByteBuffer allocateBuffer(int capacity) {
-		return ByteBuffer.allocateDirect(capacity).order(ByteOrder.nativeOrder());
-	}
-
-
-	/*
 	 * Basic Rendering Routines
 	 */
 

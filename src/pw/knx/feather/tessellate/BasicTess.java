@@ -73,7 +73,7 @@ public class BasicTess implements Tessellator {
 		 * takes up in the buffer, since each vertex stores color and texture as well. */
 		capacity *= 6;
 		this.raw = new int[capacity];
-		this.buffer = FEATHER.allocateBuffer(capacity * 4); // 4 bytes in an integer!
+		this.buffer = ByteBuffer.allocateDirect(capacity * 4); // 4 bytes in an integer!
 		this.fBuffer = this.buffer.asFloatBuffer();
 		this.iBuffer = this.buffer.asIntBuffer();
 	}
