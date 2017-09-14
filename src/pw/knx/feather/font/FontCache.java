@@ -192,7 +192,7 @@ public class FontCache {
 		allocateStringImage(TEXTURE_WIDTH, TEXTURE_HEIGHT);
 
 		/* Use Java's logical font as the default initial font if user does not override it in some configuration file */
-		java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment().preferLocaleFonts();
+		GraphicsEnvironment.getLocalGraphicsEnvironment().preferLocaleFonts();
 	}
 
 	public Font getFont() {

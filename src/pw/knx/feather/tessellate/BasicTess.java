@@ -6,8 +6,6 @@ import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
 
-import static pw.knx.feather.Feather.FEATHER;
-
 /**
  * A standard implementation of the Tessellator interface.
  * <p>
