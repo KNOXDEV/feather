@@ -76,7 +76,6 @@ public enum Feather {
 		return this;
 	}
 
-
 	/*
 	 * Basic Rendering Routines
 	 */
