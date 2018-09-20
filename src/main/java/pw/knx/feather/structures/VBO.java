@@ -112,6 +112,17 @@ public class VBO {
 	}
 
 	/**
+	 * Unbinds OpenGL from our VBO after rendering.
+	 *
+	 * @return The original VBO
+	 */
+	public VBO unbind() {
+		FEATHER.bindBuffer(0);
+		GL11.glDisableClientState(GL11.GL_VERTEX_ARRAY);
+		return this;
+	}
+
+	/**
 	 * Draws the shape with VertexArrayObjects.
 	 *
 	 * @param mode The OpenGL mode to render with.
