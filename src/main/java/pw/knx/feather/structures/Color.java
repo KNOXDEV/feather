@@ -351,6 +351,7 @@ public class Color {
 	 * @return This color object, freshly set
 	 */
 	public Color hsb(float hue, float saturation, float brightness) {
+		this.updateHSB = false;
 		return hue(hue).saturation(saturation).brightness(brightness);
 	}
 
@@ -365,6 +366,7 @@ public class Color {
 	 * @return This color object, freshly set
 	 */
 	public Color rgb(float red, float green, float blue) {
+	    this.updateRGB = false;
 		return red(red).green(green).blue(blue);
 	}
 
@@ -379,6 +381,7 @@ public class Color {
 	 * @return This color object, freshly set
 	 */
 	public Color rgb(int red, int green, int blue) {
+	    this.updateRGBInts = false;
 		return red(red).green(green).blue(blue);
 	}
 
@@ -414,6 +417,7 @@ public class Color {
 		int alpha = format.getAlphaInt(hex);
 		if (alpha != 0)
 			alpha(alpha);
+		this.updateRGBInts = false;
 		return red(format.getRedInt(hex)).green(format.getGreenInt(hex)).blue(format.getBlueInt(hex));
 	}
 
