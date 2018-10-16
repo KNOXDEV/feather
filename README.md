@@ -18,9 +18,16 @@ Feather is all about *the basics.*
 > **feather** is a library, not a framework
 
 #### Main Features:
-* Intuitive syntax
-* Eliminates the need to directly interact with OpenGL for most tasks
+* Produces intuitive, readable code
 * Get started drawing shapes or text immediately
-* Produces readable code
+* Create simple-to-use animations
+* Create and convert between many color formats
+
+#### Features to come:
+* Provide an LWJGL wrapper class that eliminates the need to call
+OpenGL directly in most cases, while still accommodating existing
+state management solutions.
+* Provide some simple, versatile shapes to work with, like cubes or pyramids
+* Rework animation system
 
 ## More documentation to come soon
