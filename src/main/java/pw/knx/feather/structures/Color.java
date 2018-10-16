@@ -741,6 +741,7 @@ public class Color {
 				this.greenInt = (int) (getGreen() * 255);
 				this.blueInt = (int) (getBlue() * 255);
 			}
+			this.updateRGBInts = false;
 		}
 		return this;
 	}
