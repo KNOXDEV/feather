@@ -714,6 +714,7 @@ public class Color {
 			this.saturation = hsb[1];
 			this.brightness = hsb[2];
 
+			// we won't need to run this code again unless something marks HSB as dirty
 			this.updateHSB = false;
 		}
 		return this;
@@ -724,6 +725,8 @@ public class Color {
 			this.red = getRedInt() / 255F;
 			this.green = getGreenInt() / 255F;
 			this.blue = getBlueInt() / 255F;
+
+            // we won't need to run this code again unless something marks RGB as dirty
 			this.updateRGB = false;
 		}
 		return this;
@@ -741,6 +744,8 @@ public class Color {
 				this.greenInt = (int) (getGreen() * 255);
 				this.blueInt = (int) (getBlue() * 255);
 			}
+
+            // we won't need to run this code again unless something marks RGB Ints as dirty
 			this.updateRGBInts = false;
 		}
 		return this;
