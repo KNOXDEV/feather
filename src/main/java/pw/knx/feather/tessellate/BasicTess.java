@@ -68,7 +68,7 @@ public class BasicTess implements Tessellator {
 	 * @param capacity The total capacity, in whole verticies, that this Tessellator will be able to render at once.
 	 */
 	BasicTess(int capacity) {
-		/** Why times 6? Because 6 is how much space (in integers) that each vertex
+		/* Why times 6? Because 6 is how much space (in integers) that each vertex
 		 * takes up in the buffer, since each vertex stores color and texture as well. */
 		capacity *= 6;
 		this.raw = new int[capacity];
@@ -141,14 +141,14 @@ public class BasicTess implements Tessellator {
 		this.buffer.limit(dex * 4);
 		if (this.color) {                           // if we've entered color data, push color data down the pipeline.
 			this.buffer.position(12);
-			GL11.glColorPointer(4, true, 24, this.buffer);
+			GL11.glColorPointer(4, GL11.GL_UNSIGNED_BYTE, 24, this.buffer);
 		}
 		if (this.texture) {                         // if we've entered texture data, push texture data down the pipeline.
 			this.fBuffer.position(4);
-			GL11.glTexCoordPointer(2, 24, this.fBuffer);
+			GL11.glTexCoordPointer(2, GL11.GL_FLOAT, 24, this.fBuffer);
 		}
 		this.fBuffer.position(0);
-		GL11.glVertexPointer(3, 24, this.fBuffer); // pushing bare minimum vertex data.
+		GL11.glVertexPointer(3, GL11.GL_FLOAT, 24, this.fBuffer); // pushing bare minimum vertex data.
 		return this;
 	}
 

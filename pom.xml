@@ -8,11 +8,16 @@
     <artifactId>feather</artifactId>
     <version>1.0</version>
 
+    <properties>
+        <lwjgl.version>3.2.1</lwjgl.version>
+        <lwjgl.natives>natives-windows</lwjgl.natives>
+    </properties>
+
     <dependencies>
         <dependency>
-            <groupId>org.lwjgl.lwjgl</groupId>
-            <artifactId>lwjgl</artifactId>
-            <version>2.9.3</version>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl-opengl</artifactId>
+            <version>${lwjgl.version}</version>
         </dependency>
     </dependencies>
 
